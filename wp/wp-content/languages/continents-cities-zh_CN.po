@@ -1,26 +1,23 @@
-# Chinese Simplified (zh_CN) translation for WordPress.
+# Simplified Chinese (zh_CN) translation for WordPress.
 # Copyright (C) 2011 WordPress contributors.
 # This file is distributed under the same license as the WordPress package.
 # Jiehan Zheng <zheng@jiehan.org>, 2011.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: WordPress 3.1 Cities\n"
 "Report-Msgid-Bugs-To: wp-polyglots@lists.automattic.com\n"
-"POT-Creation-Date: 2011-02-23 15:37:22+00:00\n"
-"PO-Revision-Date: 2011-04-05 12:20+0800\n"
+"POT-Creation-Date: 2011-02-23 17:37:08+00:00\n"
+"PO-Revision-Date: \n"
 "Last-Translator: Jiehan Zheng <zheng@jiehan.org>\n"
-"Language-Team: \n"
+"Language-Team: WordPress China <wpchina@jiehan.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Chinese\n"
-"X-Poedit-Country: CHINA\n"
 
 #. Continent and city translations for timezone selection.
-#.  * This file is not included anywhere. It exists solely for use by xgettext.
+#. * This file is not included anywhere. It exists solely for use by xgettext.
 #: wp-admin/includes/continents-cities.php:7
 msgid "Africa"
 msgstr "非洲"
@@ -1968,3 +1965,4 @@ msgstr "Wallis"
 #: wp-admin/includes/continents-cities.php:493
 msgid "Yap"
 msgstr "Yap"
+

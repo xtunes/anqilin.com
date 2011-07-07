@@ -39,9 +39,8 @@ define( 'ARRAY_N', 'ARRAY_N' );
  *
  * It is possible to replace this class with your own
  * by setting the $wpdb global variable in wp-content/db.php
- * file with your class. You can name it wpdb also, since
- * this file will not be included, if the other file is
- * available.
+ * file to your class. The wpdb class will still be included,
+ * so you can extend it or simply use your own.
  *
  * @link http://codex.wordpress.org/Function_Reference/wpdb_Class
  *
@@ -464,23 +463,6 @@ class wpdb {
 	/**
 	 * Connects to the database server and selects a database
 	 *
-	 * PHP4 compatibility layer for calling the PHP5 constructor.
-	 *
-	 * @uses wpdb::__construct() Passes parameters and returns result
-	 * @since 0.71
-	 *
-	 * @param string $dbuser MySQL database user
-	 * @param string $dbpassword MySQL database password
-	 * @param string $dbname MySQL database name
-	 * @param string $dbhost MySQL database host
-	 */
-	function wpdb( $dbuser, $dbpassword, $dbname, $dbhost ) {
-		return $this->__construct( $dbuser, $dbpassword, $dbname, $dbhost );
-	}
-
-	/**
-	 * Connects to the database server and selects a database
-	 *
 	 * PHP5 style constructor for compatibility with PHP5. Does
 	 * the actual setting up of the class properties and connection
 	 * to the database.
@@ -578,7 +560,7 @@ class wpdb {
 	function set_prefix( $prefix, $set_table_names = true ) {
 
 		if ( preg_match( '|[^a-z0-9_]|i', $prefix ) )
-			return new WP_Error('invalid_db_prefix', /*WP_I18N_DB_BAD_PREFIX*/'无效的数据库表前缀'/*/WP_I18N_DB_BAD_PREFIX*/);
+			return new WP_Error('invalid_db_prefix', /*WP_I18N_DB_BAD_PREFIX*/'数据库前缀无效'/*/WP_I18N_DB_BAD_PREFIX*/);
 
 		$old_prefix = is_multisite() ? '' : $prefix;
 
@@ -644,6 +626,7 @@ class wpdb {
 		if ( is_multisite() ) {
 			if ( null === $blog_id )
 				$blog_id = $this->blogid;
+			$blog_id = (int) $blog_id;
 			if ( defined( 'MULTISITE' ) && ( 0 == $blog_id || 1 == $blog_id ) )
 				return $this->base_prefix;
 			else
@@ -756,7 +739,7 @@ class wpdb {
 <li>您确认用户 <code>%2$s</code> 拥有使用 <code>%1$s</code> 数据库的权限？</li>
 <li>在某些系统上您的数据库名可能还包含了您用户名的前缀，例如 <code>username_%1$s</code>，问题会不会出在这里？</li>
 </ul>
-<p>如果您不知道如何设置一个数据库，您应该<strong>联系您的主机管理员</strong>。如果所有办法还没有解决您的问题，您可以在 <a href="http://wordpress.org/support/">WordPress 支持论坛</a>上寻求帮助。</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, $this->dbuser ), 'db_select_fail' );
+<p>如果您不知道如何设置一个数据库，您应该<strong>联系您的主机管理员</strong>。如果所有办法还没有解决您的问题，您可以在 <a href="http://zh-cn.forums.wordpress.org/">WordPress 中文论坛</a>上寻求帮助。</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, $this->dbuser ), 'db_select_fail' );
 			return;
 		}
 	}
@@ -929,7 +912,7 @@ class wpdb {
 		if ( $caller = $this->get_caller() )
 			$error_str = sprintf( /*WP_I18N_DB_QUERY_ERROR_FULL*/'WordPress 数据库查询 %2$s 时发生 %1$s 错误，这是由 %3$s 查询的。'/*/WP_I18N_DB_QUERY_ERROR_FULL*/, $str, $this->last_query, $caller );
 		else
-			$error_str = sprintf( /*WP_I18N_DB_QUERY_ERROR*/'查询 %2$s 时，WordPress 数据库发生错误 %1$s'/*/WP_I18N_DB_QUERY_ERROR*/, $str, $this->last_query );
+			$error_str = sprintf( /*WP_I18N_DB_QUERY_ERROR*/'查询 %2$s 时，WordPress 数据库发生 %1$s 错误'/*/WP_I18N_DB_QUERY_ERROR*/, $str, $this->last_query );
 
 		if ( function_exists( 'error_log' )
 			&& ( $log_file = @ini_get( 'error_log' ) )
@@ -1030,8 +1013,6 @@ class wpdb {
 	 * @since 3.0.0
 	 */
 	function db_connect() {
-		global $db_list, $global_db_list;
-
 		if ( WP_DEBUG ) {
 			$this->dbh = mysql_connect( $this->dbhost, $this->dbuser, $this->dbpassword, true );
 		} else {
@@ -1041,13 +1022,13 @@ class wpdb {
 		if ( !$this->dbh ) {
 			$this->bail( sprintf( /*WP_I18N_DB_CONN_ERROR*/'
 <h1>数据库连接错误</h1>
-<p>您在 <code>wp-config.php</code> 文件中提供的数据库用户名和密码可能不正确，或者无法连接到 <code>%s</code> 上数据库服务器，这意味着您的主机数据库服务器已停止工作。</p>
+<p>您在 <code>wp-config.php</code> 文件中提供的数据库用户名和密码可能不正确，或者无法连接到 <code>%s</code> 上的数据库服务器，这意味着您的主机数据库服务器已停止工作。</p>
 <ul>
 	<li>您确认您提供的用户名和密码正确么？</li>
 	<li>您确认您提供的主机名正确么？</li>
-	<li>您确认数据库服务器正常运行么？</li>
+	<li>您确认数据库服务器运行正常么？</li>
 </ul>
-<p>如果您无法确定这些问题，请联系您的主机管理员。如果您仍需帮助，请访问 <a href=\'http://wordpress.org/support/\'>WordPress 支持论坛</a>。</p>
+<p>若您不理解上述术语，请联系您的服务提供商。如果您仍需帮助，可访问 <a href=\'http://zh-cn.forums.wordpress.org/\'>WordPress 中文论坛</a>，或 <a href=\'http://wordpress.org/support/\'>WordPress 支持论坛</a>（英文）。</p>
 '/*/WP_I18N_DB_CONN_ERROR*/, $this->dbhost ), 'db_connect_fail' );
 
 			return;
@@ -1102,10 +1083,12 @@ class wpdb {
 			return false;
 		}
 
-		if ( preg_match( "/^\\s*(insert|delete|update|replace|alter) /i", $query ) ) {
+		if ( preg_match( '/^\s*(create|alter|truncate|drop) /i', $query ) ) {
+			$return_val = $this->result;
+		} elseif ( preg_match( '/^\s*(insert|delete|update|replace) /i', $query ) ) {
 			$this->rows_affected = mysql_affected_rows( $this->dbh );
 			// Take note of the insert_id
-			if ( preg_match( "/^\\s*(insert|replace) /i", $query ) ) {
+			if ( preg_match( '/^\s*(insert|replace) /i', $query ) ) {
 				$this->insert_id = mysql_insert_id($this->dbh);
 			}
 			// Return number of rows affected
@@ -1325,7 +1308,7 @@ class wpdb {
 		} elseif ( $output == ARRAY_N ) {
 			return $this->last_result[$y] ? array_values( get_object_vars( $this->last_result[$y] ) ) : null;
 		} else {
-			$this->print_error(/*WP_I18N_DB_GETROW_ERROR*/' $db->get_row(string query, output type, int offset) -- 输出类型必须是以下类型中的一个：OBJECT, ARRAY_A, ARRAY_N'/*/WP_I18N_DB_GETROW_ERROR*/);
+			$this->print_error(/*WP_I18N_DB_GETROW_ERROR*/' $db->get_row(string query, output type, int offset) —— 输出类型需为 OBJECT、ARRAY_A，或 ARRAY_N'/*/WP_I18N_DB_GETROW_ERROR*/);
 		}
 	}
 
@@ -1383,7 +1366,7 @@ class wpdb {
 			// Return an array of row objects with keys from column 1
 			// (Duplicates are discarded)
 			foreach ( $this->last_result as $row ) {
-				$key = array_shift( $var_by_ref = get_object_vars( $row ) );
+				$key = array_shift( get_object_vars( $row ) );
 				if ( ! isset( $new_array[ $key ] ) )
 					$new_array[ $key ] = $row;
 			}

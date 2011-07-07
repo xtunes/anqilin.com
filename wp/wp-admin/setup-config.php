@@ -56,13 +56,13 @@ if (file_exists(ABSPATH . 'wp-config.php'))
 
 // Check if wp-config.php exists above the root directory but is not part of another install
 if (file_exists(ABSPATH . '../wp-config.php') && ! file_exists(ABSPATH . '../wp-settings.php'))
-	wp_die("<p>'wp-config.php' 文件错误地存在于上级目录。若您希望重新配置这个安装，请先删除它。您可以尝试<a href='install.php'>现在安装</a>。</p>");
+	wp_die("<p>“wp-config.php”文件错误地存在于上级目录。若您希望重新配置这个安装，请先删除它。您可以尝试<a href='install.php'>现在安装</a>。</p>");
 
 if ( version_compare( $required_php_version, phpversion(), '>' ) )
-	wp_die( sprintf( /*WP_I18N_OLD_PHP*/'您正使用 PHP %1$s，但 WordPress 需要其版本高于 %2$s 才可工作。'/*/WP_I18N_OLD_PHP*/, phpversion(), $required_php_version ) );
+	wp_die( sprintf( /*WP_I18N_OLD_PHP*/'Your server is running PHP version %1$s but WordPress requires at least %2$s.'/*/WP_I18N_OLD_PHP*/, phpversion(), $required_php_version ) );
 
 if ( !extension_loaded('mysql') && !file_exists(ABSPATH . 'wp-content/db.php') )
-	wp_die( /*WP_I18N_OLD_MYSQL*/'您的 PHP 似乎缺失 WordPress 所需的 MySQL 插件。'/*/WP_I18N_OLD_MYSQL*/ );
+	wp_die( /*WP_I18N_OLD_MYSQL*/'您的 PHP 似乎没有安装运行 WordPress 所必需的 MySQL 扩展。'/*/WP_I18N_OLD_MYSQL*/ );
 
 if (isset($_GET['step']))
 	$step = $_GET['step'];
@@ -162,7 +162,7 @@ switch($step) {
 
 	// Validate $prefix: it can only contain letters, numbers and underscores
 	if ( preg_match( '|[^a-z0-9_]|i', $prefix ) )
-		wp_die( /*WP_I18N_BAD_PREFIX*/'<strong>错误</strong>：“表名前缀”只能含有数字、字母以及下划线。'/*/WP_I18N_BAD_PREFIX*/ );
+		wp_die( /*WP_I18N_BAD_PREFIX*/'<strong>错误</strong>：“表前缀”只能包含数字、字母和下划线。'/*/WP_I18N_BAD_PREFIX*/ );
 
 	// Test the db connection.
 	/**#@+
@@ -265,7 +265,7 @@ switch($step) {
 		chmod(ABSPATH . 'wp-config.php', 0666);
 		display_header();
 ?>
-<p>非常好！您已顺利完成安装中的这一步骤，WordPress 已经可以和您的数据库沟通。若您准备好了，现在就 &hellip;</p>
+<p>非常好！您已顺利完成安装中的这一步骤，WordPress 已经可以和您的数据库沟通。若您准备好了，现在就&hellip;</p>
 
 <p class="step"><a href="install.php" class="button">进行安装</a></p>
 <?php
