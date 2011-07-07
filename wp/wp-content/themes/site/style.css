@@ -1,0 +1,125 @@
+*{
+  margin:0px;
+  padding:0px;
+  border:0px;
+  -webkit-text-size-adjust:none;
+}
+body{
+	font-family: 'Helvetica Neue LT Std',Arial,Helvetica,sans-serif,Simsun;
+    font-size:12px;
+    background:#2f2725 url('images/bg.png') repeat-x 0 0; 
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#fff;
+}
+.clear{
+    clear:both;
+}
+.bold{font-weight:bold;}
+.size10{font-size:10px;}
+#container{
+	margin:0 auto;
+    width:980px;
+    height:768px;
+    position:relative;
+}
+.intro a.skip{font-size:12px;text-align:center;display:block;margin-top:15px;text-decoration:underline;}
+.intro .title{margin:71px auto 0 auto;width:287px;}
+.intro .video{margin:29px auto 0 auto;width:823px;height:550px;}
+.page .title{margin:59px auto 0 auto;width:287px;}
+.page .main{background:#fff;width:980px;height:575px;margin-top:75px;position:relative;}
+.info1{position:absolute;left:735px;top:135px;}
+.info2{position:absolute;right:86px;bottom:65px;text-align:right;}
+.personpic{border:1px solid #000000;width:329px;height:437px;float:left;margin:80px 0 0 45px;}
+.personintro{float:left;width:460px;padding-left:45px;margin-top:80px;overflow:hidden;height:437px;}
+.personintro p{margin:0 0 1em 0;}
+.footer{margin-top:90px;}
+.footer p{color:#CCD0D4;text-align:center;font-size:10px;}
+.footer .copyright{margin-top:10px;padding-bottom:20px;height:39px;}
+.footer .copyright p{color:#231F20;font-size:12px;}
+.slider{width:536px;position:absolute;top:185px;left:203px;}
+.slider ul {width:4880px;height: 700px;float:left; }
+.slider li {float:left;width:536px;}
+#thumbNav {display:none;}
+.arrow {display:none;}
+.mark{position:absolute;left:713px;top:480px;}
+.last{padding:0!important;border:0!important;}
+.arrow-up{position:absolute;top:80px;right:60px;}
+.arrow-down{position:absolute;bottom:58px;right:60px;}
+/* =Menu
+-------------------------------------------------------------- */
+
+#access {
+	border-top:1px solid #fff;padding-top:5px;margin-top:10px;height:14px;
+}
+#access .menu-header,
+div.menu {
+	font-size: 14px;
+}
+#access .menu-header ul,
+div.menu ul {
+	list-style: none;
+	margin: 0;
+}
+#access .menu-header li,
+div.menu li {
+	float: left;
+	position: relative;
+
+}
+#access .menu > li{
+		padding-right:84px;
+}
+#access a {
+	color: #000;
+	display: block;
+	text-decoration: none;
+	line-height: 24px;
+}
+#access ul ul {
+	display: none;
+	position: absolute;
+	top: 24px;
+	left: 0;
+	float: left;
+	width: 185px;
+	z-index: 99999;
+}
+#access ul ul li {
+	min-width: 185px;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a {
+	width: 160px;
+	height: auto;
+	font-size: 10px;
+	line-height: 12px;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+	color: #fff;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+#access ul li.current_page_item > a,
+#access ul li.current-menu-ancestor > a,
+#access ul li.current-menu-item > a,
+#access ul li.current-menu-parent > a {
+	color: #fff;
+}
+* html #access ul li.current_page_item a,
+* html #access ul li.current-menu-ancestor a,
+* html #access ul li.current-menu-item a,
+* html #access ul li.current-menu-parent a,
+* html #access ul li a:hover {
+	color: #fff;
+}
+
