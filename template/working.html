@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>index</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+		<meta name="keywords" content="keywords" />
+        <meta name="description" content="description" />
+        <meta name="author" content="xtunes.cc" />
+         <!-- jQuery (required) & jQuery UI (for this demo only) -->
+ <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+ <script type="text/javascript" src="js/jquery.anythingslider.js"></script>
+
+	</head>
+	<body>
+		<div id="container">
+			<div class="slider">
+			<div>
+				<ul>
+   <li><img src="images/slide-civil-1.png" alt="" /></li>
+   <li><img src="images/slide-env-1.png" alt="" /></li>
+   <li><img src="images/slide-civil-1.png" alt="" /></li>
+   <li><img src="images/slide-env-1.png" alt="" /></li>
+  </ul>
+			</div>
+			 </div>
+			 <div class="mark">
+			 	<img src="images/mark.png" width="198" height="187" alt="Mark">
+			 </div>
+		</div>
+		   <script type="text/javascript" charset="utf-8">
+    $(function($){        
+        if ( $('.slider').length == 1 && $('.slider li').length > 1 ) {
+          $('.slider').anythingSlider({
+            easing: "swing",                // Anything other than "linear" or "swing" requires the easing plugin
+            autoPlay: true,                 // This turns off the entire FUNCTIONALY, not just if it starts running or not
+            startStopped: false,            // If autoPlay is on, this can force it to start stopped
+            delay: 3000,                    // How long between slide transitions in AutoPlay mode
+            animationTime: 600,            // How long the slide transition takes
+            hashTags: false,                // Should links change the hashtag in the URL?
+            buildNavigation: true,          // If true, builds and list of anchor links to link to each slide
+            pauseOnHover: false,             // If true, and autoPlay is enabled, the show will pause on hover
+            startText: "",             // Start text
+            stopText: "",               // Stop text
+            navigationFormatter: null       // Details at the top of the file on this use (advanced use)
+          });
+        }
+    })
+  </script>
+  <embed src="/j'aipeur2.mp3" align="center" border="0" width="1" height="1" width="100" autostart="true" loop="true">
+	</body>
+</html>
