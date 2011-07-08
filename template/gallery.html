@@ -11,7 +11,12 @@
          <!-- jQuery (required) & jQuery UI (for this demo only) -->
  <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
  <script type="text/javascript" src="js/jquery.anythingslider.js"></script>
-
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+			var p =$('.pic > img').width();
+			$('.pic').css('width',p);
+		});
+	</script>
 	</head>
 	<body class="page gallery">
 		<div id="container">
@@ -28,7 +33,41 @@
 				</ul>
 			</div>
 			<div class="main">
-				
+				<div class="thumbnails">
+					<ul>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					   <li><img src="images/thumb.gif"></li>
+					</ul>
+					<div class="pagenavi">
+						<a href="#">Previous</a>
+						<a href="#">Next</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="picviewer">
+					<h1>J’ai peur- Sasions, L’automn est avance</h1>
+					<div class="pic">
+						<img src="images/demo.jpg">
+						<div class="zoom">
+						<a class="arrow-left" href="#"><img src="images/arrow-left.gif"></a>
+						<p>Click zoom</p>
+						<a class="arrow-right" href="#"><img src="images/arrow-right.gif"></a>
+					</div>
+					</div>					
+				</div>
+				<div class="clear"></div>
 			</div>
 			<div class="footer">
 				<p class="bold">Background Music: J’ai Peur - Heart Demon</p>

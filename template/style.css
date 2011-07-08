@@ -50,3 +50,15 @@ a{
 .arrow {display:none;}
 .mark{position:absolute;left:713px;top:480px;}
 .last{padding:0!important;border:0!important;}
+.thumbnails{padding:24px 0 0 31px;width:225px;float:left;}
+.thumbnails ul{width:170px;}
+.thumbnails ul li{float:left;padding:0 17px 8px 0;}
+.thumbnails .pagenavi{margin-top:493px;}
+.thumbnails .pagenavi a{color:#000000;display:block;}
+.picviewer{float:left;padding:24px 0px 0 20px;width:680px;}
+.picviewer h1{font-size:14px;text-align:center;}
+.picviewer .pic{margin:10px auto 0 auto;position:relative;height:522px;}
+.picviewer .zoom{position:absolute;bottom:0;width:100%;}
+.picviewer .zoom p{text-align:center;line-height:30px;}
+.picviewer .zoom .arrow-left{position:absolute;left:0;bottom:0;}
+.picviewer .zoom .arrow-right{position:absolute;right:0;bottom:0;}
