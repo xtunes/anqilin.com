@@ -30,8 +30,8 @@ a{
 .intro a.skip{font-size:12px;text-align:center;display:block;margin-top:15px;text-decoration:underline;}
 .intro .title{margin:71px auto 0 auto;width:287px;}
 .intro .video{margin:29px auto 0 auto;width:823px;height:550px;}
-.page .title{margin:59px auto 0 auto;width:287px;}
-.page .main{background:#fff;width:980px;height:575px;margin-top:75px;position:relative;}
+.page .title,.tax-portfolio-category .title{margin:59px auto 0 auto;width:287px;}
+.page .main,.tax-portfolio-category .main{background:#fff;width:980px;height:575px;margin-top:75px;position:relative;}
 .info1{position:absolute;left:735px;top:135px;}
 .info2{position:absolute;right:86px;bottom:65px;text-align:right;}
 .personpic{border:1px solid #000000;width:329px;height:437px;float:left;margin:80px 0 0 45px;}
@@ -50,6 +50,18 @@ a{
 .last{padding:0!important;border:0!important;}
 .arrow-up{position:absolute;top:80px;right:60px;}
 .arrow-down{position:absolute;bottom:58px;right:60px;}
+.thumbnails{padding:24px 0 0 31px;width:225px;float:left;}
+.thumbnails ul{width:170px;height:532px;float:left;}
+.thumbnails ul li{float:left;padding:0 17px 8px 0;}
+.thumbnails .pagenavi{margin-top:493px;}
+.thumbnails .pagenavi a{color:#000000;display:block;}
+.picviewer{float:left;padding:24px 0px 0 20px;width:680px;}
+.picviewer h1{font-size:14px;text-align:center;}
+.picviewer .pic{margin:10px auto 0 auto;position:relative;height:522px;}
+.picviewer .zoom{position:absolute;bottom:0;width:100%;}
+.picviewer .zoom p{text-align:center;line-height:30px;}
+.picviewer .zoom .arrow-left{position:absolute;left:0;bottom:0;}
+.picviewer .zoom .arrow-right{position:absolute;right:0;bottom:0;}
 /* =Menu
 -------------------------------------------------------------- */
 
@@ -72,7 +84,7 @@ div.menu li {
 
 }
 #access .menu > li{
-		padding-right:84px;
+		padding-right:80px;
 }
 #access a {
 	color: #000;

@@ -1,4 +1,6 @@
 <?php
+// require_once('FirePHPCore/fb.php');
+// ob_start();
 /**
  * TwentyTen functions and definitions
  *
@@ -506,3 +508,58 @@ function twentyten_posted_in() {
 	);
 }
 endif;
+
+function my_init_method() {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', '/js/jquery.js');
+    wp_enqueue_script( 'jquery' );
+    add_image_size( 'icon', 65 , 68 ,true);
+    add_image_size( 'preview',680, 500);
+    register_post_type('portfolio', array(	'label' => 'Portfolio','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','editor','custom-fields'),'taxonomies' => array('portfolio-category'),'labels' => array (
+      'name' => 'Portfolios',
+      'singular_name' => 'Portfolio',
+      'menu_name' => 'Portfolios',
+      'add_new' => 'Add Portfolio',
+      'add_new_item' => 'Add New Portfolio',
+      'edit' => 'Edit',
+      'edit_item' => 'Edit Portfolio',
+      'new_item' => 'New Portfolio',
+      'view' => 'View Portfolio',
+      'view_item' => 'View Portfolio',
+      'search_items' => 'Search Portfolios',
+      'not_found' => 'No Portfolios Found',
+      'not_found_in_trash' => 'No Portfolios Found in Trash',
+      'parent' => 'Parent Portfolio',
+    ),) );
+    register_taxonomy('portfolio-category',array (
+      0 => 'portfolio',
+    ),array( 'hierarchical' => true, 'label' => 'Portfolio Categories','show_ui' => true,'query_var' => true,'rewrite' => array('slug' => 'portfolio-category'),'singular_label' => 'Catalog') );
+}
+add_action('init', 'my_init_method');
+
+function custom_posts_per_page($query_string) {
+  global $posts_per;
+
+  $query = new WP_Query();
+  $query->parse_query($query_string);
+  if ($query->is_tax('portfolio-category') ) {
+    $num = '14';
+  }
+
+  if (isset($num)) {
+    if (preg_match("/posts_per_page=/", $query_string)) {
+      $query_string = preg_replace("/posts_per_page=[0-9]*/", "posts_per_page=$num", $query_string);
+    } else {
+    if ($query_string != '') {
+      $query_string .= '&';
+    }
+      $query_string .= "posts_per_page=$num";
+    }
+    $query_string .="&post_type=portfolio";
+    $query_string = preg_replace("/(^page=)/", "paged=", $query_string);
+    $query_string = preg_replace("/(&page=)/", "&paged=", $query_string);
+    // fb($query_string);
+  }
+  return $query_string;
+}
+add_filter('query_string', 'custom_posts_per_page');
