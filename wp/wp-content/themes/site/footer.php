@@ -10,6 +10,7 @@
  * @since Twenty Ten 1.0
  */
 ?>
+<div class="clear"></div>
 <div class="footer">
 				<p class="bold">Background Music: J’ai Peur - Heart Demon</p>
 				<p>Lyric: Hong xi ying</p>
@@ -22,6 +23,31 @@
 				</div>
 			</div>
 		</div>
+	<div class="overlay">  		
+  	</div>
+  	<div class="imgbox">
+  			<div class="fullimg">
+  				<img src="/images/1.jpg">
+  			</div>
+  			<div class="name">
+  			<p>J’ai peur- Sasions, L’automn est avance</p>
+			<p>C- Prints, technique mixte</p>
+			<p>90x120cm, 2011</p>
+			<p>Limité de 6</p>
+			<p>Heart demon- Seasons, Deep autumn</p>
+			<p>C- Prints, Mixed media</p>
+			<p>90x120cm, 2011</p>
+			<p>Limited of 6</p>
+			<p>心魔 -四季之深秋</p>
+			<p>数码微喷， 混合媒体</p>
+			<p>2011， Limited of 6</p>
+  		</div>
+  		<div class="name">
+  			<a href="#">INFO</a> -
+  			<a href="#">ZOOM</a> -
+  			<a href="#">VIDEO</a>
+  		</div>
+  	</div>
 
 <?php
 	/* Always have wp_footer() just before the closing </body>

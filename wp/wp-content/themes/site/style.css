@@ -55,13 +55,17 @@ a{
 .thumbnails ul li{float:left;padding:0 17px 8px 0;}
 .thumbnails .pagenavi{margin-top:493px;}
 .thumbnails .pagenavi a{color:#000000;display:block;}
-.picviewer{float:left;padding:24px 0px 0 20px;width:680px;}
+.thumbnails .current{border:2px solid #666;}
+.picviewer{float:left;padding:24px 0px 0 20px;width:680px;position:relative;height:575px;}
 .picviewer h1{font-size:14px;text-align:center;}
 .picviewer .pic{margin:10px auto 0 auto;position:relative;height:522px;}
 .picviewer .zoom{position:absolute;bottom:0;width:100%;}
 .picviewer .zoom p{text-align:center;line-height:30px;}
 .picviewer .zoom .arrow-left{position:absolute;left:0;bottom:0;}
 .picviewer .zoom .arrow-right{position:absolute;right:0;bottom:0;}
+.loading{background:url('images/ajax-loader.gif') no-repeat 0 0;width:32px;height:32px;text-indent:-9999px;position:absolute;left:45%;top:45%;}
+.overlay{background:#000;opacity: 0.8;left: 0;position: absolute;top: 0;z-index:90;display:none;}
+.imgbox{position:absolute;z-index:100;text-align:center;display:none;}
 /* =Menu
 -------------------------------------------------------------- */
 
