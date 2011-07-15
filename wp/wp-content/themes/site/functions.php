@@ -517,7 +517,7 @@ function my_init_method() {
        wp_enqueue_script( 'jquery' );
     }    
     
-    add_image_size( 'icon', 65 , 68 ,true);
+    add_image_size( 'icon', 68 , 65 ,true);
     add_image_size( 'preview',680, 500);
     register_post_type('portfolio', array(	'label' => 'Portfolio','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','editor','custom-fields'),'taxonomies' => array('portfolio-category'),'labels' => array (
       'name' => 'Portfolios',
