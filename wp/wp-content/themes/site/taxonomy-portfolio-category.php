@@ -71,37 +71,20 @@ get_header(); ?>
 		</div>
   	<script type="text/javascript" charset="utf-8">
   	  $q=jQuery.noConflict();
-  	  function adjustUI(){
-  			$q('.pic').width($q('.pic img').width());
-  	  }
-  	  function updatePreview(data){
-  	    $q('.picviewer').html(data);
-  	    adjustUI();
-  	  }
-  	  function updateThumbnails(data){
-  	    $q('.thumbnails').html(data);
-  	  }
-  	  
+
   		$q(function(){
-        adjustUI();
+        
         $q("a[rel='preview']").live('click',function(e){
           $q('.picviewer').html('<p class="loading">loading...</p>');
-          
           link=$q(this);
-          $q.get(link.attr('href'),{ajax:1},updatePreview);
+          $q('.picviewer').load(link.attr('href'),{ajax:1});
           return false;
         });
         
         $q("a[rel='paginate']").live('click',function(e){
           $q('.thumbnails').html('<p class="loading">loading...</p>');
-          
           link=$q(this);
-          if(link.attr('href').match(/ajax=1/)){
-            data=null;
-          }else{
-            data={ajax:1};
-          }
-          $q.get(link.attr('href'),data,updateThumbnails);
+          $q('.thumbnails').load(link.attr('href'),{ajax:1});
           return false;
         });
   		});

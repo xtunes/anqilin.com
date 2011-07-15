@@ -10,7 +10,7 @@
    ?>
 <h1><?php the_title()?></h1>
 <div class="pic">
-	<a href="<?php echo $fullurl ?>" rel="full" title="<?php the_title() ?>"><img src="<?php echo $previewurl; ?>"/></a>
+	<a href="<?php echo $fullurl ?>" rel="full" title="<?php the_title() ?>"><img class="preview-image" src="<?php echo $previewurl; ?>"/></a>
 	<div style="display:none" class="portfolio-description">
 	  <?php the_content() ?>
 	</div>
@@ -20,3 +20,8 @@
 	<a class="arrow-right" href="#"><img src="/images/arrow-right.gif"></a>
 </div>
 </div>
+<script type="text/javascript" charset="utf-8">
+  jQuery('.preview-image').load(function(){
+    jQuery('.pic').width(jQuery(this).width());
+  });
+</script>

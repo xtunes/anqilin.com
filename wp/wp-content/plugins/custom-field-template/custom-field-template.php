@@ -2686,7 +2686,7 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 		endif;
 		unset($_FILES);
 
-fb($fields);
+// fb($fields);
 
 		foreach( $fields as $field_key => $field_val) :
 			foreach( $field_val as $title => $data) :
