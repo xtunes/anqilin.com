@@ -16,7 +16,7 @@
 	</div>
 	<div class="zoom">
 	<a class="arrow-left" href="#"><img src="/images/arrow-left.gif"></a>
-	<p>Click zoom</p>
+	<a class="clickzoom">Click zoom</a>
 	<a class="arrow-right" href="#"><img src="/images/arrow-right.gif"></a>
 </div>
 </div>

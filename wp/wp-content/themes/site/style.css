@@ -58,18 +58,21 @@ a{
 .thumbnails .current{border:2px solid #666;}
 .picviewer{float:left;padding:24px 0px 0 20px;width:680px;position:relative;height:575px;}
 .picviewer h1{font-size:14px;text-align:center;}
-.picviewer .pic{margin:10px auto 0 auto;position:relative;height:522px;}
-.picviewer .zoom{position:absolute;bottom:0;width:100%;}
-.picviewer .zoom p{text-align:center;line-height:30px;}
-.picviewer .zoom .arrow-left{position:absolute;left:0;bottom:0;}
-.picviewer .zoom .arrow-right{position:absolute;right:0;bottom:0;}
+.picviewer .pic{margin:10px auto 0 auto;position:relative;height:522px;text-align:center;}
+.picviewer .zoom{position:absolute;bottom:0;width:100%;height:25px;text-align:center;}
+.picviewer .zoom .clickzoom{color:#000;line-height:21px;}
+.picviewer .zoom .arrow-left{float:left;}
+.picviewer .zoom .arrow-right{float:right;}
 .loading{background:url('images/ajax-loader.gif') no-repeat 0 0;width:32px;height:32px;text-indent:-9999px;position:absolute;left:45%;top:45%;}
-.overlay{background:#000;opacity: 0.8;left: 0;position: absolute;top: 0;z-index:90;width:100%;height:100%;display:none;}
-.imgbox{position:absolute;z-index:100;text-align:center;width:100%;top:30%;color:#fff;display:none;}
-#outerImageContainer{margin:0 auto;width:1000px;height:565px;}
-.fullimg{-moz-box-shadow:0px 0px 10px #000;-webkit-box-shadow:0px 0px 10px #000;box-shadow:0px 0px 10px #000;float:left;height:527px;}
+.overlay{background:#000;opacity: 0.9;left: 0;position: fixed;top: 0;z-index:90;width:100%;height:100%;}
+.imgbox{position:absolute;z-index:100;left:0;width:100%;top:242px;color:#fff;width:955px;height:565px;}
+.fullimg{-moz-box-shadow:0px 0px 10px #000;-webkit-box-shadow:0px 0px 10px #000;box-shadow:0px 0px 10px #000;float:left;height:558px;overflow:hidden;width:701px;}
 .imgbox p{text-align:left;}
-.imgintro{padding-left:23px;width:250px;float:left;}
+.imgintro{padding-left:23px;width:225px;float:left;overflow:hidden;}
+.imgintro h1{font-size:12px;}
+#videoplayer_wrapper{width:701px;margin-bottom:5px;-moz-box-shadow:0px 0px 10px #000;-webkit-box-shadow:0px 0px 10px #000;box-shadow:0px 0px 10px #000;height:538px;float:left;}
+#imgwrap{width:701px;margin-bottom:5px;-moz-box-shadow:0px 0px 10px #000;-webkit-box-shadow:0px 0px 10px #000;box-shadow:0px 0px 10px #000;height:538px;float:left;}
+.outerwrap{width:9999px;}
 /* =Menu
 -------------------------------------------------------------- */
 
@@ -92,7 +95,7 @@ div.menu li {
 
 }
 #access .menu > li{
-		padding-right:80px;
+		padding-right:84px;
 }
 #access a {
 	color: #000;

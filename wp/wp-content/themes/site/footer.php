@@ -27,14 +27,28 @@
 	<div class="overlay">  		
   	</div>
   	<div class="imgbox">
-  		<div id="outerImageContainer">
   			<div class="fullimg">
-  				<img src="/images/1.jpg">
-  				<div class="name">
-  				<a href="#">INFO</a> -
-  				<a href="#">ZOOM</a> -
-  				<a href="#">VIDEO</a>
-  			</div>
+  				<div class="outerwrap">
+  				<div id="imgwrap">
+  					  <img src="/images/1.jpg">
+  				</div>
+  				<div id="videoplayer">  					
+  				</div>
+  				<script type='text/javascript'>
+					 jwplayer('videoplayer').setup({
+					  flashplayer: '/jwplayer/player.swf',
+					  file: '/uploads/video.mp4',
+					  height: 538,
+					  width: 701
+					 });
+					</script>
+  				</div> 
+  				<div class="clear"></div>				
+  				<div style="text-align:center;">
+  					<a href="#">INFO</a> -
+  					<a href="#">ZOOM</a> -
+  					<a href="#">VIDEO</a>
+  				</div>
   			</div>
   			<div class="imgintro">
   				<p>J’ai peur- Sasions, L’automn est avance</p>
@@ -49,8 +63,7 @@
 				<p>数码微喷， 混合媒体</p>
 				<p>2011， Limited of 6</p>
   			</div>
-  			<div class="clear"></div> 
-  		</div>  			
+  			<div class="clear"></div> 		
   	</div>
 <?php
 	/* Always have wp_footer() just before the closing </body>

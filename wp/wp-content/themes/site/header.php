@@ -50,6 +50,7 @@
 	 */
 	wp_head();
 ?>
+<script type='text/javascript' src='/jwplayer/jwplayer.js'></script>
 <script type="text/javascript" charset="utf-8">
 	jQuery(function(){
 		jQuery('.menu>li:last').addClass('last');

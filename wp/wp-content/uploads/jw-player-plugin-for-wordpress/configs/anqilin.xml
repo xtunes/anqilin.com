@@ -1,0 +1,7 @@
+<config>
+<controlbar>bottom</controlbar>
+<dock>false</dock>
+<autostart>false</autostart>
+<height>280</height>
+<width>400</width>
+</config>
