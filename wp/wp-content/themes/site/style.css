@@ -64,11 +64,13 @@ a{
 .picviewer .zoom .clickzoom{color:#000;line-height:21px;}
 .picviewer .zoom .arrow-left{float:left;}
 .picviewer .zoom .arrow-right{float:right;}
-.loading{background:url('images/ajax-loader.gif') no-repeat 0 0;width:32px;height:32px;text-indent:-9999px;position:absolute;left:45%;top:45%;}
+.picviewer .loading{background:url('images/ajax-loader.gif') no-repeat 0 0;width:32px;height:32px;text-indent:-9999px;position:absolute;left:45%;top:45%;}
+.thumbnails .loading{background:url('images/ajax-loader.gif') no-repeat 0 0;width:32px;height:32px;text-indent:-9999px;margin: 100px auto;}
 .overlay{background:#000;opacity: 0.9;left: 0;position: fixed;top: 0;z-index:90;width:100%;height:100%;display:none;}
 .imgbox{position:absolute;z-index:100;left:0;width:100%;top:242px;color:#fff;width:965px;height:565px;display:none;}
 .fullimg{float:left;height:558px;overflow:hidden;width:715px;}
 .imgbox p{text-align:left;}
+#imgwrap{text-align:center;}
 .imgintro{padding-left:23px;width:225px;float:left;overflow:hidden;}
 .imgintro h1{font-size:12px;}
 #videoplayer_wrapper{width:701px;margin-bottom:5px;-moz-box-shadow:0px 0px 10px #000;-webkit-box-shadow:0px 0px 10px #000;box-shadow:0px 0px 10px #000;height:538px;float:left;}
@@ -97,7 +99,7 @@ div.menu li {
 
 }
 #access .menu > li{
-		padding-right:84px;
+		padding-right:80px;
 }
 #access a {
 	color: #000;

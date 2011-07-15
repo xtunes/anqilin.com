@@ -513,7 +513,7 @@ function my_init_method() {
 
     if ( !is_admin() ) { // instruction to only load if it is not the admin area
        wp_deregister_script( 'jquery' );
-       wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js');
+       wp_register_script( 'jquery', '/js/jquery.js');
        wp_enqueue_script( 'jquery' );
     }    
     
