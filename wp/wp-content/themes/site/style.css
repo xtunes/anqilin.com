@@ -37,7 +37,7 @@ a{
 .personpic{border:1px solid #000000;width:329px;height:437px;float:left;margin:80px 0 0 45px;}
 .personintro{float:left;width:460px;padding-left:45px;margin-top:80px;overflow:hidden;height:437px;}
 .personintro p{margin:0 0 1em 0;}
-.footer{margin-top:90px;}
+.footer{margin-top:90px;position:relative;}
 .footer p{color:#CCD0D4;text-align:center;font-size:10px;}
 .footer .copyright{margin-top:10px;padding-bottom:20px;height:39px;}
 .footer .copyright p{color:#231F20;font-size:12px;}
@@ -77,6 +77,112 @@ a{
 #imgwrap{width:720px;margin-bottom:5px;height:538px;float:left;overflow:hidden;}
 #imgwrap img{-moz-box-shadow:0px 0px 10px #000;-webkit-box-shadow:0px 0px 10px #000;box-shadow:0px 0px 10px #000;margin:5px;}
 .outerwrap{width:9999px;}
+.follow{position: absolute;top:0px;}
+.follow span{margin-right:10px;}
+body.page-id-19,body.term-acadmic-periodart,body.term-prints-poster-card,body.term-books,body.term-brochure,body.term-novel{background:#dcd9d5 url('/images/others-bg.png') repeat-x 0 0;}
+body.term-design{background:#feeae0 url('/images/design-bg.png') repeat-x 0 0;}
+.page-id-19 #access li:hover > a,.term-acadmic-periodart #access li:hover > a,.term-prints-poster-card #access li:hover > a,.term-books #access li:hover > a,.term-brochure #access li:hover > a,.term-novel #access li:hover > a{color: #7f7f7f;}
+.page-id-19 #access ul ul :hover > a,.term-acadmic-periodart #access ul ul :hover > a,.term-prints-poster-card #access ul ul :hover > a,.term-books #access ul ul :hover > a,.term-brochure #access ul ul :hover > a,.term-novel #access ul ul :hover > a{color: #7f7f7f;}
+.term-design #access li:hover > a,.term-design #access ul ul :hover > a {color: #7f7f7f;}
+
+.term-design #access ul li.current_page_item > a,
+.term-design #access ul li.current-menu-ancestor > a,
+.term-design #access ul li.current-menu-item > a,
+.term-design #access ul li.current-menu-parent > a {
+	color: #7f7f7f;
+}
+* html .term-design #access ul li.current_page_item a,
+* html .term-design #access ul li.current-menu-ancestor a,
+* html .term-design #access ul li.current-menu-item a,
+* html .term-design #access ul li.current-menu-parent a,
+* html .term-design #access ul li a:hover {
+	color: #7f7f7f;
+}
+
+.page-id-19 #access ul li.current_page_item > a,
+.page-id-19 #access ul li.current-menu-ancestor > a,
+.page-id-19 #access ul li.current-menu-item > a,
+.page-id-19 #access ul li.current-menu-parent > a {
+	color: #7f7f7f;
+}
+* html .page-id-19 #access ul li.current_page_item a,
+* html .page-id-19 #access ul li.current-menu-ancestor a,
+* html .page-id-19 #access ul li.current-menu-item a,
+* html .page-id-19 #access ul li.current-menu-parent a,
+* html .page-id-19 #access ul li a:hover {
+	color: #7f7f7f;
+}
+
+.term-acadmic-periodart #access ul li.current_page_item > a,
+.term-acadmic-periodart #access ul li.current-menu-ancestor > a,
+.term-acadmic-periodart #access ul li.current-menu-item > a,
+.term-acadmic-periodart #access ul li.current-menu-parent > a {
+	color: #7f7f7f;
+}
+* html .term-acadmic-periodart #access ul li.current_page_item a,
+* html .term-acadmic-periodart #access ul li.current-menu-ancestor a,
+* html .term-acadmic-periodart #access ul li.current-menu-item a,
+* html .term-acadmic-periodart #access ul li.current-menu-parent a,
+* html .term-acadmic-periodart #access ul li a:hover {
+	color: #7f7f7f;
+}
+
+.term-prints-poster-card #access ul li.current_page_item > a,
+.term-prints-poster-card #access ul li.current-menu-ancestor > a,
+.term-prints-poster-card #access ul li.current-menu-item > a,
+.term-prints-poster-card #access ul li.current-menu-parent > a {
+	color: #7f7f7f;
+}
+* html .term-prints-poster-card #access ul li.current_page_item a,
+* html .term-prints-poster-card #access ul li.current-menu-ancestor a,
+* html .term-prints-poster-card #access ul li.current-menu-item a,
+* html .term-prints-poster-card #access ul li.current-menu-parent a,
+* html .term-prints-poster-card #access ul li a:hover {
+	color: #7f7f7f;
+}
+
+.term-books #access ul li.current_page_item > a,
+.term-books #access ul li.current-menu-ancestor > a,
+.term-books #access ul li.current-menu-item > a,
+.term-books #access ul li.current-menu-parent > a {
+	color: #7f7f7f;
+}
+* html .term-books #access ul li.current_page_item a,
+* html .term-books #access ul li.current-menu-ancestor a,
+* html .term-books #access ul li.current-menu-item a,
+* html .term-books #access ul li.current-menu-parent a,
+* html .term-books #access ul li a:hover {
+	color: #7f7f7f;
+}
+
+.term-brochure #access ul li.current_page_item > a,
+.term-brochure #access ul li.current-menu-ancestor > a,
+.term-brochure #access ul li.current-menu-item > a,
+.term-brochure #access ul li.current-menu-parent > a {
+	color: #7f7f7f;
+}
+* html .term-brochure #access ul li.current_page_item a,
+* html .term-brochure #access ul li.current-menu-ancestor a,
+* html .term-brochure #access ul li.current-menu-item a,
+* html .term-brochure #access ul li.current-menu-parent a,
+* html .term-brochure #access ul li a:hover {
+	color: #7f7f7f;
+}
+
+.term-novel #access ul li.current_page_item > a,
+.term-novel #access ul li.current-menu-ancestor > a,
+.term-novel #access ul li.current-menu-item > a,
+.term-novel #access ul li.current-menu-parent > a {
+	color: #7f7f7f;
+}
+* html .term-novel #access ul li.current_page_item a,
+* html .term-novel #access ul li.current-menu-ancestor a,
+* html .term-novel #access ul li.current-menu-item a,
+* html .term-novel #access ul li.current-menu-parent a,
+* html .term-novel #access ul li a:hover {
+	color: #7f7f7f;
+}
+.term-design #access{border-top:1px solid #000;}
 /* =Menu
 -------------------------------------------------------------- */
 
@@ -117,14 +223,14 @@ div.menu li {
 	z-index: 99999;
 }
 #access ul ul li {
-	min-width: 185px;
+	min-width: 140px;
 }
 #access ul ul ul {
 	left: 100%;
 	top: 0;
 }
 #access ul ul a {
-	width: 160px;
+	width: 140px;
 	height: auto;
 	font-size: 10px;
 	line-height: 12px;
