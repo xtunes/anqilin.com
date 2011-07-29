@@ -12,29 +12,13 @@
 ?>
 <div class="clear"></div>
 <div class="footer">
-		<div id="musicplayer">
-		</div>
-<script type='text/javascript'>
- jwplayer('musicplayer').setup({
-  flashplayer: '/jwplayer/player.swf',
-  file: '/music/jaipeur2.mp3',
-  height: 1,
-  width: 1,
-  autoplay: true
- });
- 
- jQuery(function(){
- 	jQuery('.music-play').click(function(){
- 		jwplayer('musicplayer').play();
- 		jQuery(this).hide();
- 	);
- });
-</script>
+
 				<p class="bold">Background Music: J’ai Peur - Heart Demon</p>
 				<p>Lyric: Hong xi ying</p>
 				<p>rearragnment and voice: Anqi LIN</p>
 				<p>Origin track: Goldie</p>
-				<p class="music-play">Turn off</p>
+				<p class="music-stop">Turn off</p>
+				<p class="music-play">Turn on</p>
 				<div class="copyright">
 					<p class="bold">WEB IMAGE AND DESIGN BY anqi.LIN, all copyrights reserved,2011</p>
 					<p class="bold">Webmaster by XTUNES</p>				

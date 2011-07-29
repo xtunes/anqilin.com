@@ -255,4 +255,4 @@ div.menu li {
 * html #access ul li a:hover {
 	color: #fff;
 }
-
+.music-stop,music-play{cursor:pointer;}
