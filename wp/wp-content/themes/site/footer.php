@@ -12,7 +12,12 @@
 ?>
 <div class="clear"></div>
 <div class="footer">
-
+	<div class="follow">
+			<span>FOLLOW ME AT</span>
+			<a href="http://weibo.com/princeangel"><img src="/images/weibo.png" alt="新浪微博"></a>
+			<a href="http://www.facebook.com/Angelino.lin"><img src="/images/Facebook-Logo.png" alt="facebook"></a>
+			<a href="http://www.twitter.com/AnqiLin"><img src="/images/twitter.png" alt="twitter"></a>
+		</div>
 				<p class="bold">Background Music: J’ai Peur - Heart Demon</p>
 				<p>Lyric: Hong xi ying</p>
 				<p>rearragnment and voice: Anqi LIN</p>
@@ -23,12 +28,7 @@
 					<p class="bold">WEB IMAGE AND DESIGN BY anqi.LIN, all copyrights reserved,2011</p>
 					<p class="bold">Webmaster by XTUNES</p>				
 				</div>
-						<div class="follow">
-			<span>FOLLOW ME AT</span>
-			<a href="http://weibo.com/princeangel"><img src="/images/weibo.png" alt="新浪微博"></a>
-			<a href="http://www.facebook.com/Angelino.lin"><img src="/images/Facebook-Logo.png" alt="facebook"></a>
-			<a href="http://www.twitter.com/AnqiLin"><img src="/images/twitter.png" alt="twitter"></a>
-		</div>
+					
 			</div>
 		</div>
 </div>

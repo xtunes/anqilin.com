@@ -77,7 +77,7 @@ a{
 #imgwrap{width:720px;margin-bottom:5px;height:538px;float:left;overflow:hidden;}
 #imgwrap img{-moz-box-shadow:0px 0px 10px #000;-webkit-box-shadow:0px 0px 10px #000;box-shadow:0px 0px 10px #000;margin:5px;}
 .outerwrap{width:9999px;}
-.follow{position: absolute;top:0px;}
+.follow{text-align:center;}
 .follow span{margin-right:10px;}
 body.page-id-19,body.term-acadmic-periodart,body.term-prints-poster-card,body.term-books,body.term-brochure,body.term-novel{background:#dcd9d5 url('/images/others-bg.png') repeat-x 0 0;}
 body.term-design{background:#feeae0 url('/images/design-bg.png') repeat-x 0 0;}
