@@ -25,8 +25,9 @@
 				</div>
 						<div class="follow">
 			<span>FOLLOW ME AT</span>
-			<a href="http://www.facebook.com/Angelino.lin"><img src="/images/Facebook-Logo.png"></a>
-			<a href="http://www.twitter.com/AnqiLin"><img src="/images/twitter.png" ></a>
+			<a href="http://weibo.com/princeangel"><img src="/images/weibo.png" alt="新浪微博"></a>
+			<a href="http://www.facebook.com/Angelino.lin"><img src="/images/Facebook-Logo.png" alt="facebook"></a>
+			<a href="http://www.twitter.com/AnqiLin"><img src="/images/twitter.png" alt="twitter"></a>
 		</div>
 			</div>
 		</div>
