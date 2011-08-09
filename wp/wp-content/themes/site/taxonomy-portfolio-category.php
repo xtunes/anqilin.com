@@ -126,8 +126,14 @@ get_header(); ?>
       var $zo;
       var $zoomBox;
 
-      function toggleZoom(img){
-			  var container=img.parent();
+      function toggleZoom(){
+        var img;
+        if(arguments.length==0){
+          img=$q('#imgwrap img');
+        }else{
+          img=arguments[0];
+        }
+        var container=img.parent();
 			  var mw=container.width();
 			  var mh=container.height();
 			  			  
@@ -148,8 +154,6 @@ get_header(); ?>
         
         var w=img.width();
 			  var h=img.height();
-
-
 
 			  if(w>mw || h>mh){
 			    if(w/h>mw/mh){
@@ -266,12 +270,15 @@ get_header(); ?>
           var img=$q(this);
    			  img.attr('style','');
    			  $q('#imgwrap').scrollLeft(0).scrollTop(0).unbind('mousemove');
-          toggleZoom(img);
+   			  if(img.width()==0)
+            setTimeout(toggleZoom,0);
+          else
+            toggleZoom(img);
+          // toggleZoom();
         }).mousedown(function(){return false})
         .mouseup(function(){return false});
         ;
- 
-        
+
     	});
     </script>
 
